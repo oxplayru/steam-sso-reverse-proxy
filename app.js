@@ -86,7 +86,7 @@ app.get('/auth/steam/return',
   });
 
 
-app.get('/*', ensureAuthenticated, function(req, res){
+app.all('/*', ensureAuthenticated, function(req, res){
   try{
     var userID = req.user.identifier.replace('http://steamcommunity.com/openid/id/','');
     var json = JSON.parse(process.env.ACL);
