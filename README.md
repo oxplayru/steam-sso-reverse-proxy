@@ -31,7 +31,7 @@ docker run -dit --link apache:backend -p 80:80 -e REALM_URL=$(echo -n "http://";
 npm install
 ```
 5. Add ACL variable to runner
-6. Run app.js script
+6. Run app.js
 
 ## Custom domain example
 SSO work fine without domain, but you're can setup it in REALM_URL variable
