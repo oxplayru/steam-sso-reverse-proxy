@@ -25,8 +25,6 @@ Change ACL to your own before you run example
 docker run -dit --link apache:backend -p 80:80 -e REALM_URL=$(echo -n "http://";curl -s ident.me) -e ACL="[76561198035511373, 76561198756150798]"  innerfire/steam-sso-reverse-proxy
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Custom domain example
 SSO work fine without domain, but you're can setup it in REALM_URL variable
 
