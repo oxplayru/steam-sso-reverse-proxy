@@ -39,4 +39,4 @@ docker run -dit --link apache:backend -p 80:80 -e REALM_URL="https://google.com"
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
