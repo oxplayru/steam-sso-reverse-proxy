@@ -28,6 +28,9 @@ SSO work fine without domain, but you're can setup it in REALM_URL variable
 ```
 docker run -dit --link apache:backend -p 80:80 -e REALM_URL="https://google.com" -e ACL="[76561198035511373, 76561198756150798]"  innerfire/steam-sso-reverse-proxy
 ```
+## Tips:
+* If you're too tired to manage ports manually or need SSL support then you should look at [Nginx Proxy](https://github.com/jwilder/nginx-proxy)
+* This system is very useful with steam browser autologin
 
 ## Built With
 
