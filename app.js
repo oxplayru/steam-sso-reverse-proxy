@@ -88,7 +88,7 @@ app.get('/auth/steam/return',
 
 app.all('/*', ensureAuthenticated, function(req, res){
   try{
-    var userID = req.user.identifier.replace('http://steamcommunity.com/openid/id/','');
+    var userID = req.user.identifier.replace('https://steamcommunity.com/openid/id/','');
     var json = JSON.parse(process.env.ACL);
     var found = false;
     
@@ -106,7 +106,7 @@ app.all('/*', ensureAuthenticated, function(req, res){
     }else{
       req.logout();
       res.status(403).send();
-      console.warn( "Access denied to user " + 'http://steamcommunity.com/profiles/' + userID );
+      console.warn( "Access denied to user " + 'https://steamcommunity.com/profiles/' + userID );
     }
     
   }
